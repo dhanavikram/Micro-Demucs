@@ -18,6 +18,8 @@ For logging, this implementation uses [a simple python program `logs/log.py`](lo
 
 Each subdirectory contains more information in the appropriate README file.
 
+The commands required to run this service are provided in [`commands.sh`](./commands.sh).
+
 ### Port Forwarding
 
 For local development, the following commands can be used to port-forward redis and minio components.

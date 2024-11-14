@@ -4,7 +4,7 @@ Micro Demucs comes with a Dockerfile and deployment for a logging service.
 
 The logging service uses the [Redis list data-types](https://redis.io/docs/data-types/lists/) using [`lpush`](https://redis.io/docs/data-types/lists/#basic-commands) to add work to the queue and [`blpop` blocking pop](https://redis.io/docs/data-types/lists/#blocking-commands) to wait for work and remove it for processing.
 
-The REST and Worker servers send messages using `lpush`. The following code shows how to do that:
+At each step of the processing, the REST and worker code logs debug information using this logging infrastructure. The REST and Worker servers send messages using `lpush`. The following code shows how to do that:
 
 There are `INFO` and `DEBUG` messages which help with check the flow and errors in code. The following code is used in REST and worker applications.
 

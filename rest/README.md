@@ -32,7 +32,7 @@ There exists two Redis list data types - one to send data to the worker & anothe
 
 The REST server gets the data and generates a hash for it. It then sends the hash value to the `toWorker` queue and uploads the decoded mp3 data to Min.io. The data can be fetched again by the `worker` during its runtime.
 
-The entire mp3 data received in string format is used for hash generation (SHA256) and is again converted into a byte stream format to upload to Min.io.
+The entire mp3 data received in string format is used for hash generation (SHA256) and is again converted into a byte stream format to upload to Min.io in a bucket called "songs" which can be modified.
 
 ## Future work
 

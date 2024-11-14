@@ -1,0 +1,11 @@
+FROM python:3.12
+
+WORKDIR /rest-app
+
+RUN pip install flask minio redis requests jsonpickle
+
+COPY rest-server.py .
+
+EXPOSE 5050
+
+ENTRYPOINT ["python3", "rest-server.py"]
